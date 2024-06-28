@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "twitter-clone-6758b",
+    "deploy": "exporing-netflix"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
