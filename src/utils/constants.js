@@ -8,6 +8,3 @@ export const API_OPTION = {
 };
 
 export const MOVIE_IMG_CDN = "https://image.tmdb.org/t/p/w500";
-
-export const netflix_api_key =
-  "sk-proj-DrcWwqaN2x5erbWGee8QT3BlbkFJgu4Y1ef8PrZ3dylHIPuk";
