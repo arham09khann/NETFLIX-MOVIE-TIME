@@ -6,3 +6,8 @@ export const API_OPTION = {
       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzQyZGM5NmJlMWQ1NTVjMjI4ZDE0ZWFkYTgyNjM3ZCIsIm5iZiI6MTcxOTgxMDA3MC44ODA1ODYsInN1YiI6IjY2ODIzNmMwNjQ5YjM5NDE1MzNhZDA0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4qRugDGfH2g23kJ3xkXDTyQKosv7tgTLwchEqqwJVjQ",
   },
 };
+
+export const MOVIE_IMG_CDN = "https://image.tmdb.org/t/p/w500";
+
+export const netflix_api_key =
+  "sk-proj-DrcWwqaN2x5erbWGee8QT3BlbkFJgu4Y1ef8PrZ3dylHIPuk";

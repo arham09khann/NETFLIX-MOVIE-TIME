@@ -92,15 +92,16 @@ const Login = () => {
     <div>
       <Header />
 
-      <div className="absolute">
+      <div className="fixed">
         <img
+          className="h-screen object-cover lg:w-screen"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/a56dc29b-a0ec-4f6f-85fb-50df0680f80f/2f8ae902-8efe-49bb-9a91-51b6fcc8bf46/IN-en-20240617-popsignuptwoweeks-perspective_alpha_website_large.jpg"
           alt="bg-img"
         ></img>
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-full md:w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
+        className="w-full md:w-3/12 mt-15 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80 lg:-mt-1 "
       >
         <h1 className="font-bold text-3xl py-4">
           {isSignUp ? "Sign Up " : "Sing In"}
@@ -143,6 +144,11 @@ const Login = () => {
           {isSignUp
             ? " Already a user ? Sign In here!"
             : "New to Netfilx ? Sign Up here.."}
+        </p>{" "}
+        <br />
+        <p className="text-red-700 font-bold">
+          Credential For Testing App :
+          <br /> Id : demouser@gmail.com <br /> password : Demo@123#
         </p>
       </form>
     </div>

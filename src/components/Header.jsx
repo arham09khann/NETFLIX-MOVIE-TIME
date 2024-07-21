@@ -5,10 +5,12 @@ import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
+import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const user = useSelector((store) => store.user);
 
   const handleSignout = () => {
@@ -21,6 +23,14 @@ const Header = () => {
       });
   };
 
+  const handleGptSearchClick = () => {
+    // Toggle GPT Search
+    dispatch(toggleGptSearchView());
+  };
+
+  // const handleLanguageChange = (e) => {
+  //   dispatch(changeLanguage(e.target.value));
+  // };
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -38,6 +48,7 @@ const Header = () => {
     });
     return () => unsubscribe();
   }, [dispatch, navigate]);
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between">
       <img
@@ -47,11 +58,22 @@ const Header = () => {
       ></img>
 
       {user && (
-        <div className="bg-red-700 text-white font-bold m-5 rounded-md p-2">
-          <button className="" onClick={handleSignout}>
-            Sign Out
-          </button>
-        </div>
+        <>
+          <div className="">
+            <button
+              className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg"
+              onClick={handleGptSearchClick}
+            >
+              GPT Search
+            </button>
+            <button
+              className="bg-red-700 text-white font-bold m-5 rounded-md p-2"
+              onClick={handleSignout}
+            >
+              Sign Out
+            </button>
+          </div>
+        </>
       )}
     </div>
   );
